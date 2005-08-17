@@ -17,6 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-proto-printproto-devel
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXp
 BuildRoot:	%{tmpdir}/libXp-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -36,6 +37,7 @@ Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXp = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-printproto-devel
+Obsoletes:	libXp-devel
 
 %description devel
 DtPrint extension library.
@@ -55,6 +57,7 @@ Summary:	Static libXp libraries
 Summary(pl):	Biblioteki statyczne libXp
 Group:		Development/Libraries
 Requires:	xorg-lib-libXp-devel = %{version}-%{release}
+Obsoletes:	libXp-static
 
 %description static
 DtPrint extension library.
