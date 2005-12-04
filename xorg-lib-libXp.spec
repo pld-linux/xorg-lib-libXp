@@ -25,8 +25,8 @@ DtPrint extension library.
 Biblioteka rozszerzenia DtPrint.
 
 %package devel
-Summary:	Header files libXp development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXp
+Summary:	Header files for libXp library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -37,7 +37,7 @@ Obsoletes:	libXp-devel
 DtPrint extension library.
 
 This package contains the header files needed to develop programs that
-use these libXp.
+use libXp.
 
 %description devel -l pl
 Biblioteka rozszerzenia DtPrint.
