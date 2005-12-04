@@ -1,12 +1,12 @@
 Summary:	DtPrint extension library
 Summary(pl):	Biblioteka rozszerzenia DtPrint
 Name:		xorg-lib-libXp
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXp-%{version}.tar.bz2
-# Source0-md5:	8455bf5abe4496a8fb4a1c8d11d5cbf9
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXp-%{version}.tar.bz2
+# Source0-md5:	f49b4dcdf782601e91945d3d1605d4be
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-printproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,7 +79,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
