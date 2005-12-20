@@ -1,12 +1,12 @@
 Summary:	DtPrint extension library
 Summary(pl):	Biblioteka rozszerzenia DtPrint
 Name:		xorg-lib-libXp
-Version:	0.99.2
+Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXp-%{version}.tar.bz2
-# Source0-md5:	f49b4dcdf782601e91945d3d1605d4be
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXp-%{version}.tar.bz2
+# Source0-md5:	9052637c866a3ef298941d8d82b225d4
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
