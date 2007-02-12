@@ -1,5 +1,5 @@
 Summary:	DtPrint extension library
-Summary(pl):	Biblioteka rozszerzenia DtPrint
+Summary(pl.UTF-8):   Biblioteka rozszerzenia DtPrint
 Name:		xorg-lib-libXp
 Version:	1.0.0
 Release:	3
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DtPrint extension library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka rozszerzenia DtPrint.
 
 %package devel
 Summary:	Header files for libXp library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXp
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -39,15 +39,15 @@ DtPrint extension library.
 This package contains the header files needed to develop programs that
 use libXp.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka rozszerzenia DtPrint.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXp.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXp.
 
 %package static
 Summary:	Static libXp library
-Summary(pl):	Biblioteka statyczna libXp
+Summary(pl.UTF-8):   Biblioteka statyczna libXp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXp-static
@@ -57,10 +57,10 @@ DtPrint extension library.
 
 This package contains the static libXp library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka rozszerzenia DtPrint.
 
-Pakiet zawiera statyczn± bibliotekê libXp.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXp.
 
 %prep
 %setup -q -n libXp-%{version}
