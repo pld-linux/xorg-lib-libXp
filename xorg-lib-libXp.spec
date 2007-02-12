@@ -1,5 +1,5 @@
 Summary:	DtPrint extension library
-Summary(pl.UTF-8):   Biblioteka rozszerzenia DtPrint
+Summary(pl.UTF-8):	Biblioteka rozszerzenia DtPrint
 Name:		xorg-lib-libXp
 Version:	1.0.0
 Release:	3
@@ -26,7 +26,7 @@ Biblioteka rozszerzenia DtPrint.
 
 %package devel
 Summary:	Header files for libXp library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXp
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -47,7 +47,7 @@ używających biblioteki libXp.
 
 %package static
 Summary:	Static libXp library
-Summary(pl.UTF-8):   Biblioteka statyczna libXp
+Summary(pl.UTF-8):	Biblioteka statyczna libXp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXp-static
