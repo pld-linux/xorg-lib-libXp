@@ -5,7 +5,7 @@ Version:	1.0.0
 Release:	5
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXp-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXp-%{version}.tar.bz2
 # Source0-md5:	0f4ac39108c1ae8c443cdfac259b58fa
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
