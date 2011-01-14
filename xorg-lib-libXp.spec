@@ -1,28 +1,28 @@
-Summary:	DtPrint extension library
-Summary(pl.UTF-8):	Biblioteka rozszerzenia DtPrint
+Summary:	X Print Client library
+Summary(pl.UTF-8):	Biblioteka kliencka X Print
 Name:		xorg-lib-libXp
-Version:	1.0.0
-Release:	5
+Version:	1.0.1
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXp-%{version}.tar.bz2
-# Source0-md5:	0f4ac39108c1ae8c443cdfac259b58fa
+# Source0-md5:	7ae1d63748e79086bd51a633da1ff1a9
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-printproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.8
 Obsoletes:	libXp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-DtPrint extension library.
+X Print Client library.
 
 %description -l pl.UTF-8
-Biblioteka rozszerzenia DtPrint.
+Biblioteka kliencka X Print.
 
 %package devel
 Summary:	Header files for libXp library
@@ -78,8 +78,7 @@ Pakiet zawiera statyczną bibliotekę libXp.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -89,15 +88,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXp.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXp.so.6
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXp.so
 %{_libdir}/libXp.la
 %{_pkgconfigdir}/xp.pc
-%{_mandir}/man3/*.3x*
+%{_mandir}/man3/Xp*.3x*
+%{_mandir}/man3/libXp.3x*
 
 %files static
 %defattr(644,root,root,755)
