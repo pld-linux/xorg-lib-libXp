@@ -2,11 +2,12 @@ Summary:	X Print Client library
 Summary(pl.UTF-8):	Biblioteka kliencka X Print
 Name:		xorg-lib-libXp
 Version:	1.0.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXp-%{version}.tar.bz2
 # Source0-md5:	7ae1d63748e79086bd51a633da1ff1a9
+Patch0:		%{name}-64bit.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -64,6 +65,7 @@ Pakiet zawiera statyczną bibliotekę libXp.
 
 %prep
 %setup -q -n libXp-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
