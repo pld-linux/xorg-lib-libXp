@@ -97,8 +97,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libXp.so
 %{_libdir}/libXp.la
 %{_pkgconfigdir}/xp.pc
-%{_mandir}/man3/Xp*.3x*
-%{_mandir}/man3/libXp.3x*
+%{_mandir}/man3/Xp*.3*
+%{_mandir}/man3/libXp.3*
 
 %files static
 %defattr(644,root,root,755)
