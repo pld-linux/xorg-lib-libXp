@@ -1,25 +1,27 @@
 Summary:	X Print Client library
 Summary(pl.UTF-8):	Biblioteka kliencka X Print
 Name:		xorg-lib-libXp
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXp-%{version}.tar.bz2
-# Source0-md5:	df9e6bf0d988de6694f08693b8002079
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXp-%{version}.tar.xz
+# Source0-md5:	cf381ece59d723c8c8239ed339eadf88
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-printproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	xorg-lib-libX11 >= 1.6
-Obsoletes:	libXp
+Obsoletes:	libXp < 0.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,7 +39,7 @@ Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-lib-libXau-devel
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-printproto-devel
-Obsoletes:	libXp-devel
+Obsoletes:	libXp-devel < 0.2
 
 %description devel
 DtPrint extension library.
@@ -56,7 +58,7 @@ Summary:	Static libXp library
 Summary(pl.UTF-8):	Biblioteka statyczna libXp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXp-static
+Obsoletes:	libXp-static < 0.2
 
 %description static
 DtPrint extension library.
@@ -94,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXp.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXp.so.6
 
